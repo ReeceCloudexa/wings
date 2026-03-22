@@ -74,6 +74,7 @@ func Configure(m *wserver.Manager, client remote.Client) *gin.Engine {
 		server.GET("/version", getInstalledVersion)
 
 		server.GET("/logs", getServerLogs)
+		server.GET("/stats/protocols", getServerProtocolStats)
 		server.POST("/power", postServerPower)
 		server.POST("/commands", postServerCommands)
 		server.POST("/install", postServerInstall)
